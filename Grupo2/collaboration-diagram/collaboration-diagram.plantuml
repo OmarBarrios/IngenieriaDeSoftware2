@@ -1,0 +1,19 @@
+@startuml coll
+state Program{
+
+Main --> Initializer
+Initializer --> Manager
+
+Manager --> Machine
+
+Machine ---> Bill
+Machine ---> Coin
+Machine --r-> Product
+
+Money ---> Bill
+Money ---> Coin
+
+Product -l--> Money
+
+}
+@enduml

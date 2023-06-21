@@ -1,0 +1,25 @@
+@startuml modelo-de-dominio
+class Machine
+class Bill
+class Coin
+class Product
+class Money
+class Maintenance
+class Manager
+class Initializer
+class Purchase
+class Main
+
+Main o- Initializer
+Initializer o-- Manager
+Manager o-- Purchase
+Purchase o--d Machine
+
+Machine *--r Maintenance
+Machine o--l Money
+Machine o--- Product
+
+Money *--- Bill
+Money *--- Coin
+
+@enduml
